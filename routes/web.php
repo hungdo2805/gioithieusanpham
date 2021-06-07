@@ -22,11 +22,9 @@ Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
 
 //===================================HUNG FRONTEND=================================================
 
-<<<<<<< HEAD
 Route::get('/', function () {
     return view('welcome');
 });
-=======
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -66,7 +64,6 @@ Route::get('/contact_us.html','HomeController@contactUs')->name('get_contact_us'
 
 
 // het  Route  cua hungdev
->>>>>>> ba4e2a08cc1db7a7d11869b1b3908dd26fdc9ed0
 
 
 
