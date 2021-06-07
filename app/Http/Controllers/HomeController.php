@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 
 class HomeController extends Controller
 {
@@ -26,7 +25,6 @@ class HomeController extends Controller
     {
         return view('home');
     }
-=======
 use Illuminate\Support\Facades\Auth;
 
 
@@ -57,5 +55,4 @@ class HomeController extends Controller
         return view('home_pages.news_details');
     }
 
->>>>>>> ba4e2a08cc1db7a7d11869b1b3908dd26fdc9ed0
 }
