@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 // Route te cua hungdev
 
 Route::group(['prefix' => 'admin'], function () {
@@ -35,7 +35,9 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 
-
+Route::get('/', function () {
+    return view('home_pages/home');
+});
 Route::get('/shop.html','HomeController@getShop')->name('getshop');
 
 Route::get('/about.html','HomeController@getAbout')->name('getabout');
