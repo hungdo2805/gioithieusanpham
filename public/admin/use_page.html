@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Sở hữu trí tuệ</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="../assets/img/icon.ico" type="image/x-icon"/>
+
+	<!-- Fonts and icons -->
+	<script src="../assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Lato:300,400,700,900"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../assets/css/fonts.min.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/atlantis.css">
+
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+	<link rel="stylesheet" href="../assets/css/demo.css">
+    <style>
+        .header__navbar-toogle {
+            font-size: 20px;
+            color: #fff;
+            display: none;
+        }
+        ul.header__navbar-list.active{
+            left: 0px;
+        }
+        @media screen and (max-width: 991px)
+        {
+            .navbar-header {
+                position: absolute;
+                width: 100%;
+                transform:none !important;
+                transition: all .5s;
+                background: #1269DB !important;
+                
+            }
+            ul.header__navbar-list{
+                position:absolute;
+                top:100%;
+                left:-100%;
+                display: block;
+                background-color: #1269DB;
+                width: 100%;
+                transition: 0.5s;
+            }
+            .header__navbar-toogle {
+                display: block;
+            }
+            .table-responsive {
+                max-width: 100% !important;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+	<div class="wrapper overlay-sidebar">
+		<div class="main-header2">
+
+			<!-- Navbar Header -->
+			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2" style="min-height: 50px;">
+				
+				<div class="container-fluid">
+                    <nav class="header__navbar">
+                        <div class="header__navbar-toogle"><i class="fas fa-bars"></i></div>
+                        <ul class="header__navbar-list">
+                            <li class="header__navbar-item">
+                                <a href="#" class="header__navbar-link active">TRANG CHỦ</a>
+                            </li>
+                            <li class="header__navbar-item">
+                                <a href="#" class="header__navbar-link">GIỚI THIỆU</a>
+                            </li>
+                            <li class="header__navbar-item">
+                                <a href="#" class="header__navbar-link">TIN TỨC - SỰ KIỆN</a>
+                            </li>
+                            <li class="header__navbar-item">
+                                <a href="#" class="header__navbar-link">CƠ SỞ DỮ LIỆU</a>
+                            </li>
+							<li class="header__navbar-item">
+                                <a href="#" class="header__navbar-link">SỞ HỮU TRÍ TUỆ</a>
+                            </li>
+                        </ul>
+                    </nav>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+		</div>
+
+
+		<div class="main-panel">
+			<div class="content2">
+				<div class="panel-header bg-primary-gradient">
+					<div class="page-inner py-5 pl--70">
+						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+							<div>
+								<h2 class="text-white pb-2 fw-bold">Trang tìm kiếm</h2>
+								<h5 class="text-white op-7 mb-2"><i class="fas fa-calendar-alt"></i> 24 /05 /2021</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-inner mt--5">
+					<div class="row row-card-no-pd mt--2">
+						<div class="col-sm-6 col-md-4">
+                            <div class="form-group">
+                                <label for="huyen">Huyện</label>
+                                <select class="form-control form-control" id="defaultSelect">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+                            <div class="form-group">
+                                <label for="huyen">Xã</label>
+                                <select class="form-control form-control" id="defaultSelect">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+						</div>
+						<div class="col-sm-6 col-md-4">
+                            <div class="form-group">
+                                <label for="huyen">Lĩnh vực</label>
+                                <select class="form-control form-control" id="defaultSelect">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+						</div>
+						<div class="col-sm-12 col-md-12 mb-3">
+                            <div class="form-group">
+                                <label for="password">Số tổ</label>
+                                <input type="text" class="form-control" id="password" placeholder="Nhập số tổ">
+                            </div>
+						</div>
+                        <div class="col-sm-12 col-md-12 mb-3">
+                            <button class="btn btn-primary btn--style1">
+                                <span class="btn-label">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                                Tìm kiếm
+                            </button>
+                        </div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+                            <div class="card">
+								<div class="card-header">
+									<h4 class="card-title">Danh sách cơ sở bức xạ trên địa bàn Huyện</h4>
+								</div>
+								<div class="card-body">
+									<div class="table-responsive">
+										<table id="add-row" class="display table table-striped table-hover" >
+											<thead>
+												<tr>
+													<th style="width:10px;">STT</th>
+													<th>Mã tổ chức</th>
+													<th>Tên tổ chức</th>
+													<th>Tên giao dịch</th>
+													<th>Tên viết tắt</th>
+													<th>Trụ sở</th>
+													<th>Nơi giao dịch</th>
+													<th>Điện thoại</th>
+													<th>Người đại diện pháp luật</th>
+													<th>Người đại diện ủy quyền</th>
+													<th style="width: 5%">Hành động</th>
+												</tr>
+											</thead>
+											<tfoot>
+												<tr>
+													<th>STT</th>
+													<th>Mã tổ chức</th>
+													<th>Tên tổ chức</th>
+													<th>Tên giao dịch</th>
+													<th>Tên viết tắt</th>
+													<th>Trụ sở</th>
+													<th>Nơi giao dịch</th>
+													<th>Điện thoại</th>
+													<th>Người đại diện pháp luật</th>
+													<th>Người đại diện tổ chức</th>
+													<th style="width: 10%">Hành động</th>
+												</tr>
+											</tfoot>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>DTC1</td>
+													<td>Tổ chức a</td>
+													<td>Giao dịch 1</td>
+													<td>DTC1</td>
+													<td>Đường Z115</td>
+													<td>Thái Nguyên</td>
+													<td>0465816009</td>
+													<td>2</td>
+													<td>Nguyễn Văn C</td>
+													<td>
+														<div class="form-button-action">
+															<button type="button"  data-toggle="modal" data-target="#addRowModalInfo" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Xem thông tin">
+																<i class="fa fa-info"></i>
+															</button>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>1</td>
+													<td>DTC1</td>
+													<td>Tổ chức a</td>
+													<td>Giao dịch 1</td>
+													<td>DTC1</td>
+													<td>Đường Z115</td>
+													<td>Thái Nguyên</td>
+													<td>0465816009</td>
+													<td>2</td>
+													<td>Nguyễn Văn C</td>
+													<td>
+														<div class="form-button-action">
+															<button type="button"  data-toggle="modal" data-target="#addRowModalInfo" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Xem thông tin">
+																<i class="fa fa-info"></i>
+															</button>
+														</div>
+													</td>
+												</tr>
+                                                <tr>
+													<td>1</td>
+													<td>DTC1</td>
+													<td>Tổ chức a</td>
+													<td>Giao dịch 1</td>
+													<td>DTC1</td>
+													<td>Đường Z115</td>
+													<td>Thái Nguyên</td>
+													<td>0465816009</td>
+													<td>2</td>
+													<td>Nguyễn Văn C</td>
+													<td>
+														<div class="form-button-action">
+															<button type="button"  data-toggle="modal" data-target="#addRowModalInfo" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Xem thông tin">
+																<i class="fa fa-info"></i>
+															</button>
+														</div>
+													</td>
+												</tr>
+                                                <tr>
+													<td>1</td>
+													<td>DTC1</td>
+													<td>Tổ chức a</td>
+													<td>Giao dịch 1</td>
+													<td>DTC1</td>
+													<td>Đường Z115</td>
+													<td>Thái Nguyên</td>
+													<td>0465816009</td>
+													<td>2</td>
+													<td>Nguyễn Văn C</td>
+													<td>
+														<div class="form-button-action">
+															<button type="button"  data-toggle="modal" data-target="#addRowModalInfo" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Xem thông tin">
+																<i class="fa fa-info"></i>
+															</button>
+														</div>
+													</td>
+												</tr>
+                                                <tr>
+													<td>1</td>
+													<td>DTC1</td>
+													<td>Tổ chức a</td>
+													<td>Giao dịch 1</td>
+													<td>DTC1</td>
+													<td>Đường Z115</td>
+													<td>Thái Nguyên</td>
+													<td>0465816009</td>
+													<td>2</td>
+													<td>Nguyễn Văn C</td>
+													<td>
+														<div class="form-button-action">
+															<button type="button"  data-toggle="modal" data-target="#addRowModalInfo" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Xem thông tin">
+																<i class="fa fa-info"></i>
+															</button>
+														</div>
+													</td>
+												</tr>
+                                                <tr>
+													<td>1</td>
+													<td>DTC1</td>
+													<td>Tổ chức a</td>
+													<td>Giao dịch 1</td>
+													<td>DTC1</td>
+													<td>Đường Z115</td>
+													<td>Thái Nguyên</td>
+													<td>0465816009</td>
+													<td>2</td>
+													<td>Nguyễn Văn C</td>
+													<td>
+														<div class="form-button-action">
+															<button type="button"  data-toggle="modal" data-target="#addRowModalInfo" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Xem thông tin">
+																<i class="fa fa-info"></i>
+															</button>
+														</div>
+													</td>
+												</tr>
+                                                <tr>
+													<td>1</td>
+													<td>DTC1</td>
+													<td>Tổ chức a</td>
+													<td>Giao dịch 1</td>
+													<td>DTC1</td>
+													<td>Đường Z115</td>
+													<td>Thái Nguyên</td>
+													<td>0465816009</td>
+													<td>2</td>
+													<td>Nguyễn Văn C</td>
+													<td>
+														<div class="form-button-action">
+															<button type="button"  data-toggle="modal" data-target="#addRowModalInfo" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Xem thông tin">
+																<i class="fa fa-info"></i>
+															</button>
+														</div>
+													</td>
+												</tr>
+                                                <tr>
+													<td>1</td>
+													<td>DTC1</td>
+													<td>Tổ chức a</td>
+													<td>Giao dịch 1</td>
+													<td>DTC1</td>
+													<td>Đường Z115</td>
+													<td>Thái Nguyên</td>
+													<td>0465816009</td>
+													<td>2</td>
+													<td>Nguyễn Văn C</td>
+													<td>
+														<div class="form-button-action">
+															<button type="button"  data-toggle="modal" data-target="#addRowModalInfo" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Xem thông tin">
+																<i class="fa fa-info"></i>
+															</button>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal Pass -->
+		<div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog " role="document">
+				<div class="modal-content">
+					<div class="modal-header no-bd">
+						<h5 class="modal-title">
+							<span class="fw-mediumbold" style="color: #007bff;font-weight: 700!important;">Nhập mật khẩu để làm việc với hệ thống</span> 
+						</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span style="color: #F25961 !important;" aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<form action="#" method="POST">
+						<div class="modal-body">													
+							<div class="row">
+								<div class="form-group col-lg-12 col-md-12 ">
+									<label for="id_tochuc">Nhập mật khẩu</label>
+									<input type="text" name="password" class="form-control"  placeholder="Nhập mật khẩu" required>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer no-bd">
+							<button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times"></i> Đóng</button>
+							<button type="submit" id="addRowButton" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Đăng nhập</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--   Core JS Files   -->
+	<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="../assets/js/core/popper.min.js"></script>
+	<script src="../assets/js/core/bootstrap.min.js"></script>
+
+	<!-- jQuery UI -->
+	<script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+	<!-- jQuery Scrollbar -->
+	<script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+
+	<!-- Chart JS -->
+	<script src="../assets/js/plugin/chart.js/chart.min.js"></script>
+
+	<!-- jQuery Sparkline -->
+	<script src="../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- Chart Circle -->
+	<script src="../assets/js/plugin/chart-circle/circles.min.js"></script>
+
+	<!-- Datatables -->
+	<script src="../assets/js/plugin/datatables/datatables.min.js"></script>
+
+	<!-- Bootstrap Notify -->
+	<script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+	<!-- jQuery Vector Maps -->
+	<script src="../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+	<script src="../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+
+	<!-- Sweet Alert -->
+	<script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+	<!-- Atlantis JS -->
+	<script src="../assets/js/atlantis.min.js"></script>
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="../assets/js/setting-demo.js"></script>
+	<script src="../assets/js/demo.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.header__navbar-toogle').click(function(){
+                $('ul.header__navbar-list').toggleClass('active');
+            })
+        })
+    </script>
+	<script>
+		$('#lineChart').sparkline([102,109,120,99,110,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#177dff',
+			fillColor: 'rgba(23, 125, 255, 0.14)'
+		});
+
+		$('#lineChart2').sparkline([99,125,122,105,110,124,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#f3545d',
+			fillColor: 'rgba(243, 84, 93, .14)'
+		});
+
+		$('#lineChart3').sparkline([105,103,123,100,95,105,115], {
+			type: 'line',
+			height: '70',
+			width: '100%',
+			lineWidth: '2',
+			lineColor: '#ffa534',
+			fillColor: 'rgba(255, 165, 52, .14)'
+		});
+        // Add Row
+        $('#add-row').DataTable({
+            "pageLength": 5,
+        });
+	</script>
+</body>
+</html>
