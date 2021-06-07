@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<base href="{{ asset('') }}">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Website giới thiệu sản phẩm</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="../assets/img/icon.ico" type="image/x-icon"/>
-    <base href="{{ asset('') }}">
+  
 	<!-- Fonts and icons -->
-	<script src="{{asset('admin/assets/js/plugin/webfont/webfont.min.js')}}"></script>
+	<script src="{{asset('public/admin/assets/js/plugin/webfont/webfont.min.js')}}"></script>
 	<script>
 		WebFont.load({
 			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['admin/assets/css/fonts.min.css']},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['public/admin/assets/css/fonts.min.css']},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
@@ -19,11 +20,11 @@
 	</script>
 
 	<!-- CSS Files -->
-	<link rel="stylesheet" href="{{asset('admin/assets/css/bootstrap.min.css')}}">
-	<link rel="stylesheet" href="{{asset('admin/assets/css/atlantis.css')}}">
+	<link rel="stylesheet" href="{{asset('public/admin/assets/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('public/admin/assets/css/atlantis.css')}}">
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
-	<link rel="stylesheet" href="{{asset('admin/assets/css/demo.css')}}">
+	<link rel="stylesheet" href="{{asset('public/admin/assets/css/demo.css')}}">
 </head>
 <body>
 	<div class="wrapper">
@@ -40,8 +41,8 @@
 	@include('admin.layout.script')
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="{{asset('admin/assets/js/setting-demo.js')}}"></script>
-	<script src="{{asset('admin/assets/js/demo.js')}}"></script>
+	<script src="{{asset('public/admin/assets/js/setting-demo.js')}}"></script>
+	<script src="{{asset('public/admin/assets/js/demo.js')}}"></script>
 	<script>
 		Circles.create({
 			id:'circles-1',
