@@ -33,6 +33,22 @@ Route::group(['prefix' => 'admin'], function () {
         return view('admin.comments');
     });    
 });
+
+
+
+Route::get('/shop.html','HomeController@getShop')->name('getshop');
+
+Route::get('/about.html','HomeController@getAbout')->name('getabout');
+
+Route::get('/product_details.html','HomeController@productDetails')->name('get_product_details');
+
+Route::get('/news.html','HomeController@getNews')->name('getnews');
+
+Route::get('/news_details.html','HomeController@newsDetails')->name('get_news_details');
+
+Route::get('/contact_us.html','HomeController@contactUs')->name('get_contact_us');
+
+
 // het  Route  cua hungdev
 
 
