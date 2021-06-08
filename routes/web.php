@@ -30,7 +30,7 @@ Route::get('/', function () {
 // });
 // Route te cua hungdev
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin2'], function () {
 
     Route::get('/dashboad', function () {
         return view('admin.admin');
@@ -61,6 +61,8 @@ Route::get('/news.html','HomeController@getNews')->name('getnews');
 Route::get('/news_details.html','HomeController@newsDetails')->name('get_news_details');
 
 Route::get('/contact_us.html','HomeController@contactUs')->name('get_contact_us');
+
+
 
 
 // het  Route  cua hungdev
