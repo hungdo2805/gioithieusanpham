@@ -40,7 +40,9 @@ class ChuyenMuc_Controller extends Controller
    
     public function edit($id)
     {
+        
         $data=BangChuyenMuc::find($id);
+
         return view('admin.chuyenmuc.edit',compact('data'));
     }
 
