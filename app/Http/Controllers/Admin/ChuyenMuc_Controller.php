@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\Model\BangChuyenMuc;
+use Illuminate\Support\Str;
 
 class ChuyenMuc_Controller extends Controller
 {
@@ -15,8 +16,8 @@ class ChuyenMuc_Controller extends Controller
     public function index()
     {
         $data=BangChuyenMuc::all();
-        dd($data);
-        //return view('Admin.huyenxa.huyen',compact('data'));
+        //dd($data);
+        return view('admin.chuyenmuc.list',compact('data'));
     }
 
     public function create()
@@ -25,7 +26,8 @@ class ChuyenMuc_Controller extends Controller
    
     public function store(Request $request)
     {   
-        BangChuyenMuc::create($request->all());
+        $data= $request->all();  $data['ten_khongdau']=  Str::slug($request->ten_chuyenmuc);
+        BangChuyenMuc::create($data);
         return $this->Home();
     }
 
@@ -38,15 +40,15 @@ class ChuyenMuc_Controller extends Controller
    
     public function edit($id)
     {
-         $data=BangChuyenMuc::find($id);
-     //   dd($data);
-       // return view('Admin.huyenxa.sua_huyen',compact('data'));
+        $data=BangChuyenMuc::find($id);
+        return view('admin.chuyenmuc.edit',compact('data'));
     }
 
    
     public function update(Request $request, $id)
     {
-         BangChuyenMuc::find($id)->update($request->all()); 
+        $data= $request->all();  $data['ten_khongdau']=  Str::slug($request->ten_chuyenmuc);
+         BangChuyenMuc::find($id)->update($data); 
          return $this->Home();
     }
 

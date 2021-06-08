@@ -8,6 +8,7 @@ Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
 
     Route::get('/', 'Admin\HomeController@index')->name('home');
     Route::resource('chuyenmuc', 'Admin\ChuyenMuc_Controller');
+    Route::resource('baiviet', 'Admin\BaiViet_Controller');
 
 
 

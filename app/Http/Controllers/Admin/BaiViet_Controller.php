@@ -3,84 +3,85 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
-
 use Illuminate\Http\Request;
+use App\Model\BangChuyenMuc;
+use App\Model\BangBaiViet;
+use File;
 
 class BaiViet_Controller extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    protected $noiluufile;
+    public function __construct()
+    {
+       $this->noiluufile='public/file/baiviet/';
+    }
+    public function Home()
+    {
+      return redirect()->route('baiviet.index');
+    }
+    
     public function index()
     {
-        //
+        $data=BangBaiViet::with('chuyenmuc')->get();
+ //dd($data);
+        return view('admin.baiviet.list',compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
-        //
+        return view('admin.baiviet.add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(Request $request)
     {
-        //
+        $file=$request->file('hinh_anh');$tenfile=$file->getClientOriginalName();// 
+        $data = $request->all();     $data['hinh_anh']=$tenfile;;//
+   // dd($data,$data['hinh_anh']);
+         BangBaiViet::create($data);// thêm vào CSDL 
+        $file->move($this->noiluufile,$tenfile); // 
+        return $this->Home();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     public function edit($id)
     {
-        //
+        $data=BangBaiViet::find($id);
+        return view('admin.baiviet.edit',compact('data'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function update(Request $request, $id)
     {
-        //
+                $data = $request->all(); 
+                $file=$request->file('hinh_anh');
+                if(isset($file)) //co file
+                {
+                $tenfile=$file->getClientOriginalName();
+                $data['hinh_anh']=$tenfile;
+        //dd($data);
+                $file->move($this->noiluufile,$tenfile); // 
+                }
+
+        // dd($data);        
+                BangBaiViet::findOrFail($id)->update($data);        
+                return $this->Home();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy($id)
     {
-        //
+        $data=BangBaiViet::find($id);
+//   dd('public/file/nhanhieu/'.$data->hinh_anh);//
+        File::delete($this->noiluufile.$data->hinh_anh);
+        BangBaiViet::find($id)->delete(); 
+        return $this->Home();
     }
 }
