@@ -77,19 +77,3 @@
 </div>
 @endsection
 
-@section('kethuaJS')
-<script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
-{{-- <script> CKEDITOR.replace('noi_dung'); </script> --}}
-<script>
-    CKEDITOR.replace( 'noi_dung', {
-        filebrowserBrowseUrl: '{{ asset('ckeditor/ckfinder/ckfinder.html') }}',
-        filebrowserImageBrowseUrl: '{{ asset('ckeditor/ckfinder/ckfinder.html?type=Images') }}',
-        filebrowserFlashBrowseUrl: '{{ asset('ckeditor/ckfinder/ckfinder.html?type=Flash') }}',
-        filebrowserUploadUrl: '{{ asset('ckeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
-        filebrowserImageUploadUrl: '{{ asset('ckeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
-        filebrowserFlashUploadUrl: '{{ asset('ckeditor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}'
-    } );
-
-    CKEDITOR.config.height = '600px';
-</script>
-@endsection

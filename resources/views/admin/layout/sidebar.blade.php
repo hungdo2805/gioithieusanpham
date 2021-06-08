@@ -10,7 +10,7 @@
                     <img src="{{asset('admin_assets/img/profile.jpg')}}" alt="avatar admin" class="avatar-img rounded-circle">
                 </div>
                 <div class="info">
-                    <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+                    <a data-toggle="collapse" href="admin" aria-expanded="true">
                         <span>
                            ADMIN
                             <span class="user-level">Administrator</span>
@@ -22,17 +22,17 @@
                     <div class="collapse in" id="collapseExample">
                         <ul class="nav">
                             <li>
-                                <a href="#profile">
+                                <a >
                                     <span class="link-collapse">Thông tin của tôi</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#edit">
+                                <a >
                                     <span class="link-collapse">Sủa thông tin</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#settings">
+                                <a >
                                     <span class="link-collapse">Cài đặt</span>
                                 </a>
                             </li>
@@ -70,7 +70,7 @@
                             </li>
                             
                             <li class="@yield('menu3')">
-                                <a href="#">
+                                <a href="{{route('binhluan.index')}}">
                                     <span class="sub-item">Bình Luận </span>
                                 </a>
                             </li>

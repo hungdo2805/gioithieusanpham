@@ -65,9 +65,9 @@
 
                                                 <td>
                                                     <div class="form-button-action">
-                                                        <a href="{{ route('baiviet.show',$cot->id) }}" class="btn btn-link btn-primary btn-lg" data-original-title="Xem thông tin">
+                                                        {{-- <a href="{{ route('baiviet.show',$cot->id) }}" class="btn btn-link btn-primary btn-lg" data-original-title="Xem thông tin">
                                                             <i class="fa fa-info"></i>
-                                                        </a>
+                                                        </a> --}}
                                                         <a href="{{ route('baiviet.edit',$cot->id) }}" class="btn btn-link btn-primary btn-lg" data-original-title="Xem thông tin">
                                                             <i class="fa fa-edit"></i>
                                                         </a>
