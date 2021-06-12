@@ -12,6 +12,9 @@
         <link rel="stylesheet" type="text/css" href="khach/assets/css/plugins.css" />
         <link rel="stylesheet" type="text/css" href="khach/assets/css/style.css" />
         <script src="khach/assets/js/modernizr-3.5.0.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="khach/assets/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="khach/assets/slick/slick-theme.css"/>
+
         <style type="text/css">
             #freecssfooter {
                 display: block;
@@ -32,9 +35,48 @@
                 float: none;
                 margin: 0 auto;
             }
+            .slick-prev, .slick-next  {
+                /* background: red!important; */
+                top:-65px!important;
+                /* width: 50px!important;
+                height: 50px!important; */
+                color:#333 !important;
+                margin:20px 0px;
+            }
+            .slick-next {
+                right: 0px!important;
+            }
+            .slick-prev {
+                left: 93%!important;
+            }
+            .slick-prev:before, .slick-next:before {
+                color: #333!important;
+                font-size: 30px
+            }
+            .category{
+                margin-top: 10px;
+            }
+            .no-mt + .no-mt{
+                margin-top: 30px!important;
+            }
+            .slick-slide{
+              height: auto !important;
+            }
         </style>
+      
+
+      
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        	<!-- CSS Files -->
+	    <link rel="stylesheet" href="{{asset('admin_assets/css/bootstrap.min.css')}}">
+        <script src="{{asset('admin_assets/js/core/jquery.3.2.1.min.js')}}"></script>
+        <script src="{{asset('admin_assets/js/core/popper.min.js')}}"></script>
+        <script src="{{asset('admin_assets/js/core/bootstrap.min.js')}}"></script>
+
+        @yield('kethuacss')
+
     </head>
-    <body>
+    <body class="@yield('body')">
         <script type="text/javascript">
             (function () {
                 var bsa = document.createElement("script");
@@ -45,83 +87,7 @@
             })();
         </script>
         
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-3 fh5co_padding_menu"><img src="khach/assets/images/logo.png" alt="website template image" class="fh5co_logo_width" /></div>
-                    <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
-                        <div class="text-center d-inline-block">
-                            <a class="fh5co_display_table">
-                                <div class="fh5co_verticle_middle"><i class="fa fa-search"></i></div>
-                            </a>
-                        </div>
-                        <div class="text-center d-inline-block">
-                            <a class="fh5co_display_table">
-                                <div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div>
-                            </a>
-                        </div>
-                        <div class="text-center d-inline-block">
-                            <a class="fh5co_display_table">
-                                <div class="fh5co_verticle_middle"><i class="fa fa-google-plus"></i></div>
-                            </a>
-                        </div>
-                        <div class="text-center d-inline-block">
-                            <a href="https://www.free-css.com/free-css-templates" class="fh5co_display_table">
-                                <div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div>
-                            </a>
-                        </div>
-                        <div class="text-center d-inline-block">
-                            <a href="https://www.free-css.com/free-css-templates" class="fh5co_display_table">
-                                <div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div>
-                            </a>
-                        </div>
-                        <div class="d-inline-block text-center dd_position_relative">
-                            <select class="form-control fh5co_text_select_option">
-                                <option>English</option>
-                                <option>French</option>
-                                <option>German</option>
-                                <option>Spanish</option>
-                            </select>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid bg-faded fh5co_padd_mediya padding_786">
-            <div class="container padding_786">
-                <nav class="navbar navbar-toggleable-md navbar-light">
-                    <button
-                        class="navbar-toggler navbar-toggler-right mt-3"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class="fa fa-bars"></span>
-                    </button>
-                    <a class="navbar-brand" href="https://www.free-css.com/free-css-templates"><img src="khach/assets/images/logo.png" alt="website template image" class="mobile_logo_width" /></a>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{{ route('khach.index') }}">Trang chủ <span class="sr-only">(current)</span></a>
-                            </li>
-                            @foreach ($data as $data)
-                                <li class="nav-item">
-                                    {{-- <a class="nav-link" href="{{ $data->ten_khongdau }}/{{ $data->id }}">{{ $data->ten_chuyenmuc }} <span class="sr-only">(current)</span></a> --}}
-                                    <a class="nav-link" href="{{ route('khach.getchuyenmuc', ['ten_chuyen_muc'=>$data->ten_khongdau,'id'=>$data->id]) }}">{{ $data->ten_chuyenmuc }} <span class="sr-only">(current)</span></a>
-
-                                </li>
-                            @endforeach
-                         
-                            
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
+        @include('khach.header')
        
 
         @yield('main')
@@ -138,6 +104,12 @@
         <script src="khach/assets/js/bootstrap.min.js"></script>
         <script src="khach/assets/js/jquery.waypoints.min.js"></script>
         <script src="khach/assets/js/main.js"></script>
+        
+        <script type="text/javascript" src="khach/assets/slick/slick.js"></script>
+
+        <script type="text/javascript" src="khach/assets/js/main2.js"></script>
+
+
         <div id="freecssfooter">
             <div id="fcssholder">
                 <div id="bsap_2365" class="bsarocks bsap_b893e54e42ad5b76e7b252f59be18e67"></div>

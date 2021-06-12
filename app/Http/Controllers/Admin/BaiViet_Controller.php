@@ -30,7 +30,8 @@ class BaiViet_Controller extends Controller
     
     public function create()
     {
-        return view('admin.baiviet.add');
+        $chuyenmuc=BangChuyenMuc::all();
+        return view('admin.baiviet.add',compact('chuyenmuc'));
     }
 
    
@@ -53,8 +54,9 @@ class BaiViet_Controller extends Controller
     
     public function edit($id)
     {
+        $chuyenmuc=BangChuyenMuc::all();
         $data=BangBaiViet::find($id);
-        return view('admin.baiviet.edit',compact('data'));
+        return view('admin.baiviet.edit',compact('data','chuyenmuc'));
     }
 
    

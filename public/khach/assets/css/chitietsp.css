@@ -1,0 +1,44 @@
+#comment h3{
+	margin-top: 15px;
+	font-size: 24px;	
+	color: #ff9600;
+	text-transform: uppercase;
+}
+.form-control{
+	border-radius: 0px;
+}
+.btn{
+	border-radius: 0px;
+	background: #ff9600;
+	color: #fff;
+}
+.btn:hover{
+	background: #ff9600;
+}
+.comment{
+	padding: 0px;
+}
+#comment-list ul{
+	border-bottom: 1px dotted #cdcdcd;
+	padding-bottom: 10px;
+}
+#comment-list li{
+	list-style: none;
+	color: #666;
+	line-height: 22px;
+	font-size: 12px;
+}
+li.com-title{
+	color: #000;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+li.com-title span{
+	font-weight: normal;
+	color: #999;
+}
+.comment-list{
+	margin-top: 25px;
+	text-align: justify;
+}
+/* end details */

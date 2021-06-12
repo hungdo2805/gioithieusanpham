@@ -25,8 +25,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $chuyenmuc=BangChuyenMuc::all();
+        $category=BangChuyenMuc::all();
        // view()->share('chuyenmuc',$chuyenmuc);
-       View::share('chuyenmuc',$chuyenmuc);
+       View::share('category',$category);
     }
 }

@@ -28,11 +28,12 @@ Route::resource('binhluan', 'BinhLuan_Controller');
 
 
 Route::get('/','Khach_Controller@trangchu')->name('khach.index');
-Route::get('baiviet/{id}','Khach_Controller@getbaiviet')->name('post.getbaiviet');
+Route::get('baiviet/{id}','Khach_Controller@getbaiviet')->name('khach.getbaiviet');
 
+Route::get('category/{tenchuyemuc}','Khach_Controller@getchuyenmuc')->name('khach.getchuyenmuc');
 
-Route::get('{ten_chuyen_muc}/{id}','Khach_Controller@getchuyenmuc')->name('khach.getchuyenmuc');
-
+Route::post('comment','BinhLuan_Controller@store')->name('khach.binhluan');
+Route::get('timkiem','Khach_Controller@get_timkiem')->name('khach.timkiem');
 
 
 

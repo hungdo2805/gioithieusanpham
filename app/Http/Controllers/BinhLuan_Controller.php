@@ -39,9 +39,10 @@ class BinhLuan_Controller extends Controller
      */
     public function store(Request $request)
     {
-        //
-
-    
+        $data = $request->all();   
+         //  dd("Khách comment",$data);
+        BangBinhLuan::create($data);
+        return back();
     }
 
     /**

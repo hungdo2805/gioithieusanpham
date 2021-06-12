@@ -32,8 +32,8 @@
                                         <div class="form-group col-lg-12 col-md-12">
                                             <label for="">Chuyên mục</label>
                                             <select name="id_chuyenmuc" class="form-control" required>
-                                                @foreach ($chuyenmuc as $chuyenmuc)
-                                                    <option value=" {{ $chuyenmuc->id }} ">{{ $chuyenmuc->ten_chuyenmuc }}</option>
+                                                @foreach ($chuyenmuc as $data)
+                                                    <option value=" {{ $data->id }} ">{{ $data->ten_chuyenmuc }}</option>
                                                  @endforeach  
                                             </select>
                                         </div>

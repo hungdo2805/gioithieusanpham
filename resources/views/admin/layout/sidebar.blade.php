@@ -28,7 +28,7 @@
                             </li>
                             <li>
                                 <a >
-                                    <span class="link-collapse">Sủa thông tin</span>
+                                    <span class="link-collapse">Sửa thông tin</span>
                                 </a>
                             </li>
                             <li>
@@ -42,9 +42,9 @@
             </div>
             <ul class="nav nav-primary">
                 <li class="nav-item @yield('menutong1')">
-                    <a href="admin">
+                    <a href="{{ route('khach.index') }}">
                         <i class="fas fa-home"></i>
-                        <p>Dashboard</p>
+                        <p>Trang chủ</p>
                     </a>
                 </li>
                 <li class="nav-item">

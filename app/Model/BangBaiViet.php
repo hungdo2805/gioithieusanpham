@@ -9,7 +9,7 @@ class BangBaiViet extends Model
     protected $table="tbl_baiviet";
     protected $primaryKey="id";
     protected $guarded = [];//Tất cả các cột không thuoc trong guarded[] có thể gán hàng loạt.,Thay vi di khai bao Fillable tung cot 1
-    public $timestamps=false;
+    public $timestamps=true;
 
     public function chuyenmuc()
     {
