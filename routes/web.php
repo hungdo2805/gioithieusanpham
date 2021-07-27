@@ -37,7 +37,7 @@ Route::get('timkiem','Khach_Controller@get_timkiem')->name('khach.timkiem');
 
 
 
-
+//Route::get('noiluufile','Admin\BaiViet_Controller@getnoiluufile');
 
 
 

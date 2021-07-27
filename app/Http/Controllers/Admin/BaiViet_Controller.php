@@ -10,11 +10,12 @@ use File;
 
 class BaiViet_Controller extends Controller
 {
-    protected $noiluufile;
-    public function __construct()
-    {
-       $this->noiluufile='public/file/baiviet/';
-    }
+    private $noiluufile="public/file/baiviet/";
+
+    // public function __construct()
+    // {
+    //    $this->noiluufile='public/file/baiviet/';
+    // }
     public function Home()
     {
       return redirect()->route('baiviet.index');
@@ -86,4 +87,11 @@ class BaiViet_Controller extends Controller
         BangBaiViet::find($id)->delete(); 
         return $this->Home();
     }
+
+/*    public function getnoiluufile()
+    {
+        # code...
+        dd($this->noiluufile);
+    }*/
+    
 }
